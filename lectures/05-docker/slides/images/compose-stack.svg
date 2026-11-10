@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" width="1100" height="420" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">The menu service and its database in Docker Compose</title>
+  <desc id="d">A browser on your laptop reaches the menu container through port 8000. Inside the Compose project, the menu container finds the database container by its service name, db. The db container stores its data in a volume called pgdata and runs a start-up script, 01_menu.sql, the first time only.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#14213d"/></marker>
+  </defs>
+  <rect x="340" y="10" width="740" height="400" rx="16" fill="none" stroke="#14213d" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="360" y="48" font-size="26" fill="#14213d" font-weight="700">compose.yaml: one command</text>
+  <g font-size="28" text-anchor="middle">
+    <rect x="20" y="165" width="200" height="90" rx="12" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/>
+    <text x="120" y="219" fill="#1f2933">Browser</text>
+    <rect x="370" y="150" width="250" height="120" rx="12" fill="#0b6668"/>
+    <text x="495" y="198" fill="#ffffff" font-size="34" font-weight="700">menu</text>
+    <text x="495" y="234" fill="#ffffff" font-size="26">built from your</text>
+    <text x="495" y="262" fill="#ffffff" font-size="26">Dockerfile</text>
+    <rect x="800" y="150" width="250" height="120" rx="12" fill="#14213d"/>
+    <text x="925" y="198" fill="#ffffff" font-size="34" font-weight="700">db</text>
+    <text x="925" y="238" fill="#ffffff" font-size="26">postgres:16</text>
+    <rect x="800" y="26" width="250" height="70" rx="10" fill="#fff4de" stroke="#14213d" stroke-width="3"/>
+    <text x="925" y="54" fill="#14213d" font-size="26">01_menu.sql</text>
+    <text x="925" y="84" fill="#14213d" font-size="26">(runs once)</text>
+    <rect x="800" y="330" width="250" height="70" rx="10" fill="#fff4de" stroke="#14213d" stroke-width="3"/>
+    <text x="925" y="374" fill="#14213d" font-size="26">volume: pgdata</text>
+  </g>
+  <g stroke="#14213d" stroke-width="4" fill="none" marker-end="url(#a)">
+    <path d="M222,210 L366,210"/>
+    <path d="M622,210 L796,210"/>
+    <path d="M925,98 L925,146"/>
+    <path d="M925,272 L925,326"/>
+  </g>
+  <g font-size="26" fill="#1f2933" text-anchor="middle">
+    <text x="282" y="196">-p 8000</text>
+    <text x="710" y="196">host: db</text>
+  </g>
+  <text x="370" y="320" font-size="26" fill="#1f2933">menu starts only after</text>
+  <text x="370" y="352" font-size="26" fill="#1f2933">db is healthy</text>
+</svg>

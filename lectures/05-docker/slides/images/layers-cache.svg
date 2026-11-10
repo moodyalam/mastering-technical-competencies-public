@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" width="1100" height="430" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">Order of Dockerfile steps and the build cache</title>
+  <desc id="d">Two lists of Dockerfile steps. Before: copying all the code first means the code copy, pip install and run steps are all rebuilt after an edit. After: copying only requirements.txt, then installing, then copying the code means only the code copy and the final step are rebuilt; pip install is reused.</desc>
+  <text x="270" y="32" text-anchor="middle" font-size="30" font-weight="700" fill="#14213d">Before: code first</text>
+  <text x="830" y="32" text-anchor="middle" font-size="30" font-weight="700" fill="#14213d">After: requirements first</text>
+  <g font-size="24">
+    <!-- BEFORE: 5 rows -->
+    <g font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace">
+      <rect x="20" y="52" width="320" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="34" y="86" fill="#1f2933">FROM python</text>
+      <rect x="20" y="114" width="320" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="34" y="148" fill="#1f2933">WORKDIR /app</text>
+      <rect x="20" y="176" width="320" height="52" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3" stroke-dasharray="8 5"/><text x="34" y="210" fill="#14213d">COPY . .</text>
+      <rect x="20" y="238" width="320" height="52" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3" stroke-dasharray="8 5"/><text x="34" y="272" fill="#14213d">RUN pip install</text>
+      <rect x="20" y="300" width="320" height="52" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3" stroke-dasharray="8 5"/><text x="34" y="334" fill="#14213d">CMD python app.py</text>
+    </g>
+    <g font-weight="700" text-anchor="middle">
+      <text x="440" y="86" fill="#1f2933" font-weight="400">reused</text>
+      <text x="440" y="148" fill="#1f2933" font-weight="400">reused</text>
+      <text x="440" y="210" fill="#14213d">REBUILT</text>
+      <text x="440" y="272" fill="#14213d">REBUILT (slow)</text>
+      <text x="440" y="334" fill="#14213d">REBUILT</text>
+    </g>
+    <!-- AFTER: 6 rows -->
+    <g font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace">
+      <rect x="580" y="52" width="340" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="594" y="86" fill="#1f2933">FROM python</text>
+      <rect x="580" y="114" width="340" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="594" y="148" fill="#1f2933">WORKDIR /app</text>
+      <rect x="580" y="176" width="340" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="594" y="210" fill="#1f2933">COPY requirements</text>
+      <rect x="580" y="238" width="340" height="52" rx="8" fill="#eaf4f4" stroke="#0b6668" stroke-width="3"/><text x="594" y="272" fill="#1f2933">RUN pip install</text>
+      <rect x="580" y="300" width="340" height="52" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3" stroke-dasharray="8 5"/><text x="594" y="334" fill="#14213d">COPY . .</text>
+      <rect x="580" y="362" width="340" height="52" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3" stroke-dasharray="8 5"/><text x="594" y="396" fill="#14213d">CMD python app.py</text>
+    </g>
+    <g text-anchor="start">
+      <text x="935" y="86" fill="#1f2933">reused</text>
+      <text x="935" y="148" fill="#1f2933">reused</text>
+      <text x="935" y="210" fill="#1f2933">reused</text>
+      <text x="935" y="272" fill="#1f2933" font-weight="700">CACHED</text>
+      <text x="935" y="334" fill="#14213d" font-weight="700">REBUILT</text>
+      <text x="935" y="396" fill="#14213d" font-weight="700">REBUILT</text>
+    </g>
+  </g>
+</svg>
