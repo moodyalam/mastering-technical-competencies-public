@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">Virtual machines compared with containers</title>
+  <desc id="d">Left: a virtual machine stack. Hardware, host operating system and a hypervisor carry two virtual machines, each with its own guest operating system and an app with libraries. Right: a container stack. Hardware, host operating system and the Docker engine carry three containers, each only an app with libraries, sharing the host kernel.</desc>
+  <text x="275" y="34" text-anchor="middle" font-size="32" font-weight="700" fill="#14213d">Virtual machines</text>
+  <text x="825" y="34" text-anchor="middle" font-size="32" font-weight="700" fill="#14213d">Containers</text>
+  <g font-size="26" text-anchor="middle">
+    <!-- left stack -->
+    <rect x="20" y="372" width="510" height="56" rx="8" fill="#4a5563"/><text x="275" y="409" fill="#ffffff">Laptop hardware</text>
+    <rect x="20" y="312" width="510" height="56" rx="8" fill="#14213d"/><text x="275" y="349" fill="#ffffff">Host operating system</text>
+    <rect x="20" y="252" width="510" height="56" rx="8" fill="#0b6668"/><text x="275" y="289" fill="#ffffff">Hypervisor</text>
+    <rect x="20" y="172" width="245" height="76" rx="8" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/><text x="142" y="218" fill="#1f2933">Guest OS</text>
+    <rect x="285" y="172" width="245" height="76" rx="8" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/><text x="407" y="218" fill="#1f2933">Guest OS</text>
+    <rect x="20" y="104" width="245" height="64" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3"/><text x="142" y="146" fill="#14213d">App + libs</text>
+    <rect x="285" y="104" width="245" height="64" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3"/><text x="407" y="146" fill="#14213d">App + libs</text>
+    <!-- right stack -->
+    <rect x="570" y="372" width="510" height="56" rx="8" fill="#4a5563"/><text x="825" y="409" fill="#ffffff">Laptop hardware</text>
+    <rect x="570" y="312" width="510" height="56" rx="8" fill="#14213d"/><text x="825" y="349" fill="#ffffff">Host operating system</text>
+    <rect x="570" y="252" width="510" height="56" rx="8" fill="#0b6668"/><text x="825" y="289" fill="#ffffff">Docker engine</text>
+    <rect x="570" y="172" width="160" height="76" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3"/><text x="650" y="218" fill="#14213d">App + libs</text>
+    <rect x="745" y="172" width="160" height="76" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3"/><text x="825" y="218" fill="#14213d">App + libs</text>
+    <rect x="920" y="172" width="160" height="76" rx="8" fill="#fff4de" stroke="#14213d" stroke-width="3"/><text x="1000" y="218" fill="#14213d">App + libs</text>
+    <text x="825" y="118" fill="#1f2933" font-size="26">No guest OS: they share</text>
+    <text x="825" y="150" fill="#1f2933" font-size="26">the host's kernel</text>
+  </g>
+</svg>

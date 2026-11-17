@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" width="1100" height="400" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">The loop: a branch leaves main and comes back through a pull request</title>
+  <desc id="d">A branch is a named line of work, not a folder. The main line runs left to right. A branch called price-test leaves main, gets one commit that adds the price test, and is pushed to GitHub. A pull request runs the checks and asks for a review. The branch is then merged back into main, and you switch back to main and pull.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#14213d"/></marker>
+  </defs>
+  <text x="550" y="38" text-anchor="middle" font-size="30" font-weight="700" fill="#14213d">A branch is a named line of work, not a folder</text>
+  <!-- main -->
+  <path d="M30,300 L1070,300" stroke="#14213d" stroke-width="8" fill="none" marker-end="url(#a)"/>
+  <text x="30" y="350" font-size="28" font-weight="700" fill="#14213d">main</text>
+  <circle cx="110" cy="300" r="16" fill="#14213d"/>
+  <circle cx="230" cy="300" r="16" fill="#14213d"/>
+  <!-- branch -->
+  <path d="M230,300 C300,300 300,150 380,150 L700,150" stroke="#0b6668" stroke-width="8" fill="none"/>
+  <text x="250" y="140" font-size="28" font-weight="700" fill="#0b6668">price-test</text>
+  <circle cx="470" cy="150" r="16" fill="#0b6668"/>
+  <text x="470" y="200" text-anchor="middle" font-size="24" fill="#1f2933">commit: add the</text>
+  <text x="470" y="228" text-anchor="middle" font-size="24" fill="#1f2933">price test, push</text>
+  <!-- pull request -->
+  <rect x="610" y="78" width="250" height="144" rx="14" fill="#fff4de" stroke="#14213d" stroke-width="4" stroke-dasharray="10 6"/>
+  <text x="735" y="118" text-anchor="middle" font-size="28" font-weight="700" fill="#14213d">pull request</text>
+  <text x="735" y="156" text-anchor="middle" font-size="24" fill="#1f2933">checks run</text>
+  <text x="735" y="190" text-anchor="middle" font-size="24" fill="#1f2933">a person reviews</text>
+  <!-- merge back -->
+  <path d="M860,150 C930,150 930,300 980,300" stroke="#0b6668" stroke-width="8" fill="none"/>
+  <circle cx="980" cy="300" r="20" fill="#ffffff" stroke="#14213d" stroke-width="6"/>
+  <text x="980" y="262" text-anchor="middle" font-size="24" font-weight="700" fill="#14213d">merge</text>
+  <text x="1070" y="350" text-anchor="end" font-size="24" fill="#1f2933">then: git switch main, git pull</text>
+</svg>

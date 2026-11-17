@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" width="1100" height="400" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">One image, many containers</title>
+  <desc id="d">One image, labelled recipe plus ingredients, read-only, points with three arrows to three separate containers A, B and C, each a running copy.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#14213d"/></marker>
+  </defs>
+  <rect x="20" y="110" width="340" height="180" rx="16" fill="#0b6668"/>
+  <text x="190" y="170" text-anchor="middle" font-size="40" font-weight="700" fill="#ffffff">Image</text>
+  <text x="190" y="215" text-anchor="middle" font-size="28" fill="#ffffff">recipe + ingredients</text>
+  <text x="190" y="255" text-anchor="middle" font-size="28" fill="#ffffff">read-only</text>
+  <g stroke="#14213d" stroke-width="4" fill="none" marker-end="url(#a)">
+    <path d="M360,170 L560,70"/>
+    <path d="M360,200 L560,200"/>
+    <path d="M360,230 L560,330"/>
+  </g>
+  <g fill="#fff4de" stroke="#14213d" stroke-width="3">
+    <rect x="570" y="20" width="500" height="100" rx="14"/>
+    <rect x="570" y="150" width="500" height="100" rx="14"/>
+    <rect x="570" y="280" width="500" height="100" rx="14"/>
+  </g>
+  <g fill="#14213d" text-anchor="middle">
+    <text x="820" y="66" font-size="34" font-weight="700">Container A</text>
+    <text x="820" y="102" font-size="28">a running copy</text>
+    <text x="820" y="196" font-size="34" font-weight="700">Container B</text>
+    <text x="820" y="232" font-size="28">a running copy</text>
+    <text x="820" y="326" font-size="34" font-weight="700">Container C</text>
+    <text x="820" y="362" font-size="28">a running copy</text>
+  </g>
+</svg>

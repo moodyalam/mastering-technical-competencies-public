@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 390" width="1100" height="390" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">The ruleset is a gate in front of main</title>
+  <desc id="d">A gate called protect-main stands in front of the main branch. Top: a git push straight to main hits the gate and is refused, shown by an octagon with a cross and the word refused, with GitHub's error code GH013. Bottom: a pull request whose test check has passed, shown by a circle with a tick, goes through the opening in the gate and is merged into main.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#14213d"/></marker>
+  </defs>
+  <!-- gate -->
+  <text x="620" y="36" text-anchor="middle" font-size="28" font-weight="700" fill="#14213d">ruleset: protect-main</text>
+  <rect x="598" y="56" width="44" height="170" rx="6" fill="#14213d"/>
+  <!-- top lane: direct push -->
+  <rect x="20" y="86" width="300" height="96" rx="12" fill="#fff4de" stroke="#14213d" stroke-width="3"/>
+  <text x="170" y="126" text-anchor="middle" font-size="28" font-weight="700" fill="#14213d">git push</text>
+  <text x="170" y="162" text-anchor="middle" font-size="24" fill="#1f2933">straight to main</text>
+  <path d="M322,134 L520,134" stroke="#14213d" stroke-width="4" fill="none" marker-end="url(#a)"/>
+  <polygon points="550,106 570,106 586,122 586,146 570,162 550,162 534,146 534,122" fill="#b3261e"/>
+  <path d="M549,123 L571,145 M571,123 L549,145" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="670" y="124" font-size="28" font-weight="700" fill="#14213d">refused (GH013)</text>
+  <text x="670" y="160" font-size="24" fill="#1f2933">changes must go through</text>
+  <text x="670" y="190" font-size="24" fill="#1f2933">a pull request</text>
+  <!-- bottom lane: pull request with a green check -->
+  <rect x="20" y="240" width="300" height="110" rx="12" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/>
+  <text x="40" y="284" font-size="28" font-weight="700" fill="#14213d">pull request</text>
+  <text x="40" y="324" font-size="24" fill="#1f2933">check "test" passed</text>
+  <circle cx="284" cy="276" r="22" fill="#0b6668"/>
+  <path d="M273,277 L281,285 L295,268" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M322,295 L786,295" stroke="#14213d" stroke-width="4" fill="none" marker-end="url(#a)"/>
+  <text x="460" y="280" text-anchor="middle" font-size="24" fill="#1f2933">let through</text>
+  <rect x="790" y="245" width="290" height="100" rx="12" fill="#0b6668"/>
+  <text x="935" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">merged</text>
+  <text x="935" y="326" text-anchor="middle" font-size="24" fill="#ffffff">into main</text>
+</svg>

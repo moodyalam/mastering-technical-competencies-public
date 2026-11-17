@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 350" width="1100" height="350" role="img" aria-labelledby="t d" font-family="'Atkinson Hyperlegible','Inter','Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <title id="t">The pipeline: push, checks, review, merge, build, ship</title>
+  <desc id="d">Six stages in one row, left to right: push a branch, checks run the tests, review by a person, merge into main, build the image, ship it by publishing. Checks and review can both say no. A pass, shown as a circle with a tick, lets the change carry on to the next stage. A fail, shown as an octagon with a cross, stops it there; you read why, fix it and push again, which is drawn as an arrow back to push.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#14213d"/></marker>
+  </defs>
+  <!-- Six stages -->
+  <g text-anchor="middle">
+    <rect x="10" y="20" width="155" height="100" rx="12" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/>
+    <text x="87" y="62" font-size="30" font-weight="700" fill="#14213d">push</text>
+    <text x="87" y="98" font-size="24" fill="#1f2933">a branch</text>
+    <rect x="196" y="20" width="155" height="100" rx="12" fill="#fff4de" stroke="#14213d" stroke-width="4" stroke-dasharray="10 6"/>
+    <text x="273" y="62" font-size="30" font-weight="700" fill="#14213d">checks</text>
+    <text x="273" y="98" font-size="24" fill="#1f2933">tests run</text>
+    <rect x="382" y="20" width="155" height="100" rx="12" fill="#fff4de" stroke="#14213d" stroke-width="4" stroke-dasharray="10 6"/>
+    <text x="459" y="62" font-size="30" font-weight="700" fill="#14213d">review</text>
+    <text x="459" y="98" font-size="24" fill="#1f2933">a person</text>
+    <rect x="568" y="20" width="155" height="100" rx="12" fill="#eaf4f4" stroke="#14213d" stroke-width="3"/>
+    <text x="645" y="62" font-size="30" font-weight="700" fill="#14213d">merge</text>
+    <text x="645" y="98" font-size="24" fill="#1f2933">into main</text>
+    <rect x="754" y="20" width="155" height="100" rx="12" fill="#0b6668"/>
+    <text x="831" y="62" font-size="30" font-weight="700" fill="#ffffff">build</text>
+    <text x="831" y="98" font-size="24" fill="#ffffff">the image</text>
+    <rect x="940" y="20" width="155" height="100" rx="12" fill="#14213d"/>
+    <text x="1017" y="62" font-size="30" font-weight="700" fill="#ffffff">ship</text>
+    <text x="1017" y="98" font-size="24" fill="#ffffff">publish it</text>
+  </g>
+  <g stroke="#14213d" stroke-width="4" fill="none" marker-end="url(#a)">
+    <path d="M166,70 L193,70"/>
+    <path d="M352,70 L379,70"/>
+    <path d="M538,70 L565,70"/>
+    <path d="M724,70 L751,70"/>
+    <path d="M910,70 L937,70"/>
+  </g>
+  <!-- Which stages can say no -->
+  <text x="366" y="160" text-anchor="middle" font-size="24" fill="#1f2933">dashed boxes can say no</text>
+  <!-- Pass -->
+  <circle cx="230" cy="215" r="26" fill="#0b6668"/>
+  <path d="M217,216 L227,226 L244,205" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="272" y="224" font-size="28" fill="#1f2933"><tspan font-weight="700" fill="#14213d">pass:</tspan> the change carries on to the next stage</text>
+  <!-- Fail -->
+  <polygon points="219,264 241,264 256,279 256,301 241,316 219,316 204,301 204,279" fill="#b3261e"/>
+  <path d="M220,280 L240,300 M240,280 L220,300" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="272" y="299" font-size="28" fill="#1f2933"><tspan font-weight="700" fill="#14213d">fail:</tspan> it stops there. Read why, fix, push again</text>
+  <!-- Back to push -->
+  <path d="M200,290 L87,290 L87,125" stroke="#14213d" stroke-width="4" fill="none" stroke-dasharray="8 6" marker-end="url(#a)"/>
+</svg>
